@@ -19,7 +19,6 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  console.log('요청들어옴');
   next();
 });
 

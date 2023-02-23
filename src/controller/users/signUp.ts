@@ -7,7 +7,7 @@ const signUp = (req: Request, res: Response) => {
   const isAdded = addUser(id, name, password);
 
   if (isAdded) {
-    res.json({
+    res.status(201).json({
       user: {
         id,
         name,
