@@ -6,6 +6,8 @@ import usersRouter from './routers/usersRouter';
 const app: Express = express();
 const port = 5000;
 
+app.use(express.json());
+
 app.use('/users', usersRouter);
 app.use('/todos', todoRouter);
 

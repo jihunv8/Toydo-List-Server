@@ -1,11 +1,13 @@
 //users
 import { Router } from 'express';
-import type { Request, Response } from 'express';
+
+import login from '../controller/users/login';
+import signUp from '../controller/users/signUp';
 
 const usersRouter = Router();
 
-usersRouter.get('/', (req: Request, res: Response) => {
-  res.send('Hello users');
-});
+usersRouter.post('/new-user', signUp);
+
+usersRouter.post('/login', login);
 
 export default usersRouter;
