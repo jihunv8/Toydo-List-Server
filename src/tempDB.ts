@@ -16,3 +16,12 @@ export const addUser = (id: Id, name: string, password: string): boolean => {
   users.set(id, { name, password });
   return true;
 };
+
+export const getUser = (id: Id) => {
+  const user = users.get(id);
+  if (user !== undefined) {
+    return { id, ...user };
+  } else {
+    return undefined;
+  }
+};
