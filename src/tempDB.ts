@@ -4,7 +4,7 @@ type User = {
   password: string;
 };
 
-const users = new Map<Id, User>([['test123', { name: 'test', password: 'test123' }]]);
+const users = new Map<Id, User>([['test1234', { name: 'test', password: 'test1234' }]]);
 
 export const addUser = (id: Id, name: string, password: string): boolean => {
   const temp = users.get(id);
