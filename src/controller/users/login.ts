@@ -14,7 +14,7 @@ const login = (req: Request, res: Response) => {
       message: '비밀번호를 잘못 입력했습니다.',
     });
   } else {
-    res.cookie('id', id);
+    res.cookie('userId', id);
     res.json({
       user,
       message: '로그인 되었습니다',
