@@ -17,9 +17,14 @@ app.use(
     // CORS 설정
     origin: true,
     credentials: true,
-    methods: ['GET', 'POST', 'OPTIONS', 'PATCH', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'PATCH', 'DELETE'],
   })
 );
+
+app.use((req: Request, res: Response, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
 
 app.use('/users', usersRouter);
 app.use('/todos', todoRouter);
